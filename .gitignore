@@ -1,0 +1,16 @@
+# Raw data (~1.8 GB) - re-download with scripts/download_data.py
+data/
+
+# Large / temporary Spark output (small results in output/results and output/plans ARE committed)
+output/trips_clean/
+**/_temporary/
+*.crc
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

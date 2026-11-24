@@ -1,0 +1,12 @@
+services:                       # list of containers we want to run
+  spark:                        # name of our service (any name works)
+    image: quay.io/jupyter/pyspark-notebook:latest   # ready image: Python + Java + PySpark + Jupyter
+    container_name: spark-taxi  # fixed container name, easy to reference in commands
+    ports:                      # "host_port:container_port"
+      - "8888:8888"             # Jupyter server
+      - "4040:4040"             # Spark UI - shows jobs, stages and the DAG
+    volumes:                    # connect folders between Windows and the container
+      - ./:/home/jovyan/work    # current folder (PySpark) -> /home/jovyan/work inside container
+    environment:                # environment variables for the container
+      - JUPYTER_TOKEN=spark     # Jupyter login password
+    working_dir: /home/jovyan/work   # default folder for commands = our project folder

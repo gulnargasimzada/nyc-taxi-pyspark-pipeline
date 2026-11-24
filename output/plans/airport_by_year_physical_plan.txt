@@ -1,0 +1,761 @@
+== Physical Plan ==
+AdaptiveSparkPlan (127)
++- Sort (126)
+   +- Exchange (125)
+      +- HashAggregate (124)
+         +- Exchange (123)
+            +- HashAggregate (122)
+               +- Project (121)
+                  +- BroadcastHashJoin LeftOuter BuildRight (120)
+                     :- Project (115)
+                     :  +- BroadcastHashJoin LeftOuter BuildRight (114)
+                     :     :- Union (109)
+                     :     :  :- Project (3)
+                     :     :  :  +- Filter (2)
+                     :     :  :     +- Scan parquet  (1)
+                     :     :  :- Project (6)
+                     :     :  :  +- Filter (5)
+                     :     :  :     +- Scan parquet  (4)
+                     :     :  :- Project (9)
+                     :     :  :  +- Filter (8)
+                     :     :  :     +- Scan parquet  (7)
+                     :     :  :- Project (12)
+                     :     :  :  +- Filter (11)
+                     :     :  :     +- Scan parquet  (10)
+                     :     :  :- Project (15)
+                     :     :  :  +- Filter (14)
+                     :     :  :     +- Scan parquet  (13)
+                     :     :  :- Project (18)
+                     :     :  :  +- Filter (17)
+                     :     :  :     +- Scan parquet  (16)
+                     :     :  :- Project (21)
+                     :     :  :  +- Filter (20)
+                     :     :  :     +- Scan parquet  (19)
+                     :     :  :- Project (24)
+                     :     :  :  +- Filter (23)
+                     :     :  :     +- Scan parquet  (22)
+                     :     :  :- Project (27)
+                     :     :  :  +- Filter (26)
+                     :     :  :     +- Scan parquet  (25)
+                     :     :  :- Project (30)
+                     :     :  :  +- Filter (29)
+                     :     :  :     +- Scan parquet  (28)
+                     :     :  :- Project (33)
+                     :     :  :  +- Filter (32)
+                     :     :  :     +- Scan parquet  (31)
+                     :     :  :- Project (36)
+                     :     :  :  +- Filter (35)
+                     :     :  :     +- Scan parquet  (34)
+                     :     :  :- Project (39)
+                     :     :  :  +- Filter (38)
+                     :     :  :     +- Scan parquet  (37)
+                     :     :  :- Project (42)
+                     :     :  :  +- Filter (41)
+                     :     :  :     +- Scan parquet  (40)
+                     :     :  :- Project (45)
+                     :     :  :  +- Filter (44)
+                     :     :  :     +- Scan parquet  (43)
+                     :     :  :- Project (48)
+                     :     :  :  +- Filter (47)
+                     :     :  :     +- Scan parquet  (46)
+                     :     :  :- Project (51)
+                     :     :  :  +- Filter (50)
+                     :     :  :     +- Scan parquet  (49)
+                     :     :  :- Project (54)
+                     :     :  :  +- Filter (53)
+                     :     :  :     +- Scan parquet  (52)
+                     :     :  :- Project (57)
+                     :     :  :  +- Filter (56)
+                     :     :  :     +- Scan parquet  (55)
+                     :     :  :- Project (60)
+                     :     :  :  +- Filter (59)
+                     :     :  :     +- Scan parquet  (58)
+                     :     :  :- Project (63)
+                     :     :  :  +- Filter (62)
+                     :     :  :     +- Scan parquet  (61)
+                     :     :  :- Project (66)
+                     :     :  :  +- Filter (65)
+                     :     :  :     +- Scan parquet  (64)
+                     :     :  :- Project (69)
+                     :     :  :  +- Filter (68)
+                     :     :  :     +- Scan parquet  (67)
+                     :     :  :- Project (72)
+                     :     :  :  +- Filter (71)
+                     :     :  :     +- Scan parquet  (70)
+                     :     :  :- Project (75)
+                     :     :  :  +- Filter (74)
+                     :     :  :     +- Scan parquet  (73)
+                     :     :  :- Project (78)
+                     :     :  :  +- Filter (77)
+                     :     :  :     +- Scan parquet  (76)
+                     :     :  :- Project (81)
+                     :     :  :  +- Filter (80)
+                     :     :  :     +- Scan parquet  (79)
+                     :     :  :- Project (84)
+                     :     :  :  +- Filter (83)
+                     :     :  :     +- Scan parquet  (82)
+                     :     :  :- Project (87)
+                     :     :  :  +- Filter (86)
+                     :     :  :     +- Scan parquet  (85)
+                     :     :  :- Project (90)
+                     :     :  :  +- Filter (89)
+                     :     :  :     +- Scan parquet  (88)
+                     :     :  :- Project (93)
+                     :     :  :  +- Filter (92)
+                     :     :  :     +- Scan parquet  (91)
+                     :     :  :- Project (96)
+                     :     :  :  +- Filter (95)
+                     :     :  :     +- Scan parquet  (94)
+                     :     :  :- Project (99)
+                     :     :  :  +- Filter (98)
+                     :     :  :     +- Scan parquet  (97)
+                     :     :  :- Project (102)
+                     :     :  :  +- Filter (101)
+                     :     :  :     +- Scan parquet  (100)
+                     :     :  :- Project (105)
+                     :     :  :  +- Filter (104)
+                     :     :  :     +- Scan parquet  (103)
+                     :     :  +- Project (108)
+                     :     :     +- Filter (107)
+                     :     :        +- Scan parquet  (106)
+                     :     +- BroadcastExchange (113)
+                     :        +- Project (112)
+                     :           +- Filter (111)
+                     :              +- Scan csv  (110)
+                     +- BroadcastExchange (119)
+                        +- Project (118)
+                           +- Filter (117)
+                              +- Scan csv  (116)
+
+
+(1) Scan parquet 
+Output [8]: [tpep_pickup_datetime#41, tpep_dropoff_datetime#42, trip_distance#44, PULocationID#47L, DOLocationID#48L, fare_amount#50, tip_amount#53, total_amount#56]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-01.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(2) Filter
+Input [8]: [tpep_pickup_datetime#41, tpep_dropoff_datetime#42, trip_distance#44, PULocationID#47L, DOLocationID#48L, fare_amount#50, tip_amount#53, total_amount#56]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#41) AND isnotnull(trip_distance#44)) AND isnotnull(fare_amount#50)) AND isnotnull(tip_amount#53)) AND isnotnull(tpep_dropoff_datetime#42)) AND (tpep_pickup_datetime#41 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#41 < 2025-01-01 00:00:00)) AND (trip_distance#44 > 0.0)) AND (trip_distance#44 <= 100.0)) AND (fare_amount#50 > 0.0)) AND (fare_amount#50 <= 500.0)) AND (tip_amount#53 >= 0.0)) AND (tpep_dropoff_datetime#42 > tpep_pickup_datetime#41)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#41 as timestamp), cast(tpep_dropoff_datetime#42 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#41 as timestamp), cast(tpep_dropoff_datetime#42 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#44 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#41 as timestamp), cast(tpep_dropoff_datetime#42 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(3) Project
+Output [4]: [cast(PULocationID#47L as int) AS pulocationid#82, cast(DOLocationID#48L as int) AS dolocationid#83, total_amount#56 AS total_amount#75, year(cast(tpep_pickup_datetime#41 as date)) AS pickup_year#1625]
+Input [8]: [tpep_pickup_datetime#41, tpep_dropoff_datetime#42, trip_distance#44, PULocationID#47L, DOLocationID#48L, fare_amount#50, tip_amount#53, total_amount#56]
+
+(4) Scan parquet 
+Output [8]: [tpep_pickup_datetime#85, tpep_dropoff_datetime#86, trip_distance#88, PULocationID#91L, DOLocationID#92L, fare_amount#94, tip_amount#97, total_amount#100]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-02.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(5) Filter
+Input [8]: [tpep_pickup_datetime#85, tpep_dropoff_datetime#86, trip_distance#88, PULocationID#91L, DOLocationID#92L, fare_amount#94, tip_amount#97, total_amount#100]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#85) AND isnotnull(trip_distance#88)) AND isnotnull(fare_amount#94)) AND isnotnull(tip_amount#97)) AND isnotnull(tpep_dropoff_datetime#86)) AND (tpep_pickup_datetime#85 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#85 < 2025-01-01 00:00:00)) AND (trip_distance#88 > 0.0)) AND (trip_distance#88 <= 100.0)) AND (fare_amount#94 > 0.0)) AND (fare_amount#94 <= 500.0)) AND (tip_amount#97 >= 0.0)) AND (tpep_dropoff_datetime#86 > tpep_pickup_datetime#85)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#85 as timestamp), cast(tpep_dropoff_datetime#86 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#85 as timestamp), cast(tpep_dropoff_datetime#86 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#88 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#85 as timestamp), cast(tpep_dropoff_datetime#86 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(6) Project
+Output [4]: [cast(PULocationID#91L as int) AS pulocationid#126, cast(DOLocationID#92L as int) AS dolocationid#127, total_amount#100, year(cast(tpep_pickup_datetime#85 as date)) AS pickup_year#5031]
+Input [8]: [tpep_pickup_datetime#85, tpep_dropoff_datetime#86, trip_distance#88, PULocationID#91L, DOLocationID#92L, fare_amount#94, tip_amount#97, total_amount#100]
+
+(7) Scan parquet 
+Output [8]: [tpep_pickup_datetime#129, tpep_dropoff_datetime#130, trip_distance#132, PULocationID#135L, DOLocationID#136L, fare_amount#138, tip_amount#141, total_amount#144]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-03.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(8) Filter
+Input [8]: [tpep_pickup_datetime#129, tpep_dropoff_datetime#130, trip_distance#132, PULocationID#135L, DOLocationID#136L, fare_amount#138, tip_amount#141, total_amount#144]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#129) AND isnotnull(trip_distance#132)) AND isnotnull(fare_amount#138)) AND isnotnull(tip_amount#141)) AND isnotnull(tpep_dropoff_datetime#130)) AND (tpep_pickup_datetime#129 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#129 < 2025-01-01 00:00:00)) AND (trip_distance#132 > 0.0)) AND (trip_distance#132 <= 100.0)) AND (fare_amount#138 > 0.0)) AND (fare_amount#138 <= 500.0)) AND (tip_amount#141 >= 0.0)) AND (tpep_dropoff_datetime#130 > tpep_pickup_datetime#129)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#129 as timestamp), cast(tpep_dropoff_datetime#130 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#129 as timestamp), cast(tpep_dropoff_datetime#130 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#132 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#129 as timestamp), cast(tpep_dropoff_datetime#130 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(9) Project
+Output [4]: [cast(PULocationID#135L as int) AS pulocationid#170, cast(DOLocationID#136L as int) AS dolocationid#171, total_amount#144, year(cast(tpep_pickup_datetime#129 as date)) AS pickup_year#5032]
+Input [8]: [tpep_pickup_datetime#129, tpep_dropoff_datetime#130, trip_distance#132, PULocationID#135L, DOLocationID#136L, fare_amount#138, tip_amount#141, total_amount#144]
+
+(10) Scan parquet 
+Output [8]: [tpep_pickup_datetime#173, tpep_dropoff_datetime#174, trip_distance#176, PULocationID#179L, DOLocationID#180L, fare_amount#182, tip_amount#185, total_amount#188]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-04.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(11) Filter
+Input [8]: [tpep_pickup_datetime#173, tpep_dropoff_datetime#174, trip_distance#176, PULocationID#179L, DOLocationID#180L, fare_amount#182, tip_amount#185, total_amount#188]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#173) AND isnotnull(trip_distance#176)) AND isnotnull(fare_amount#182)) AND isnotnull(tip_amount#185)) AND isnotnull(tpep_dropoff_datetime#174)) AND (tpep_pickup_datetime#173 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#173 < 2025-01-01 00:00:00)) AND (trip_distance#176 > 0.0)) AND (trip_distance#176 <= 100.0)) AND (fare_amount#182 > 0.0)) AND (fare_amount#182 <= 500.0)) AND (tip_amount#185 >= 0.0)) AND (tpep_dropoff_datetime#174 > tpep_pickup_datetime#173)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#173 as timestamp), cast(tpep_dropoff_datetime#174 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#173 as timestamp), cast(tpep_dropoff_datetime#174 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#176 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#173 as timestamp), cast(tpep_dropoff_datetime#174 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(12) Project
+Output [4]: [cast(PULocationID#179L as int) AS pulocationid#214, cast(DOLocationID#180L as int) AS dolocationid#215, total_amount#188, year(cast(tpep_pickup_datetime#173 as date)) AS pickup_year#5033]
+Input [8]: [tpep_pickup_datetime#173, tpep_dropoff_datetime#174, trip_distance#176, PULocationID#179L, DOLocationID#180L, fare_amount#182, tip_amount#185, total_amount#188]
+
+(13) Scan parquet 
+Output [8]: [tpep_pickup_datetime#217, tpep_dropoff_datetime#218, trip_distance#220, PULocationID#223L, DOLocationID#224L, fare_amount#226, tip_amount#229, total_amount#232]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-05.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(14) Filter
+Input [8]: [tpep_pickup_datetime#217, tpep_dropoff_datetime#218, trip_distance#220, PULocationID#223L, DOLocationID#224L, fare_amount#226, tip_amount#229, total_amount#232]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#217) AND isnotnull(trip_distance#220)) AND isnotnull(fare_amount#226)) AND isnotnull(tip_amount#229)) AND isnotnull(tpep_dropoff_datetime#218)) AND (tpep_pickup_datetime#217 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#217 < 2025-01-01 00:00:00)) AND (trip_distance#220 > 0.0)) AND (trip_distance#220 <= 100.0)) AND (fare_amount#226 > 0.0)) AND (fare_amount#226 <= 500.0)) AND (tip_amount#229 >= 0.0)) AND (tpep_dropoff_datetime#218 > tpep_pickup_datetime#217)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#217 as timestamp), cast(tpep_dropoff_datetime#218 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#217 as timestamp), cast(tpep_dropoff_datetime#218 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#220 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#217 as timestamp), cast(tpep_dropoff_datetime#218 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(15) Project
+Output [4]: [cast(PULocationID#223L as int) AS pulocationid#258, cast(DOLocationID#224L as int) AS dolocationid#259, total_amount#232, year(cast(tpep_pickup_datetime#217 as date)) AS pickup_year#5034]
+Input [8]: [tpep_pickup_datetime#217, tpep_dropoff_datetime#218, trip_distance#220, PULocationID#223L, DOLocationID#224L, fare_amount#226, tip_amount#229, total_amount#232]
+
+(16) Scan parquet 
+Output [8]: [tpep_pickup_datetime#261, tpep_dropoff_datetime#262, trip_distance#264, PULocationID#267L, DOLocationID#268L, fare_amount#270, tip_amount#273, total_amount#276]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-06.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(17) Filter
+Input [8]: [tpep_pickup_datetime#261, tpep_dropoff_datetime#262, trip_distance#264, PULocationID#267L, DOLocationID#268L, fare_amount#270, tip_amount#273, total_amount#276]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#261) AND isnotnull(trip_distance#264)) AND isnotnull(fare_amount#270)) AND isnotnull(tip_amount#273)) AND isnotnull(tpep_dropoff_datetime#262)) AND (tpep_pickup_datetime#261 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#261 < 2025-01-01 00:00:00)) AND (trip_distance#264 > 0.0)) AND (trip_distance#264 <= 100.0)) AND (fare_amount#270 > 0.0)) AND (fare_amount#270 <= 500.0)) AND (tip_amount#273 >= 0.0)) AND (tpep_dropoff_datetime#262 > tpep_pickup_datetime#261)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#261 as timestamp), cast(tpep_dropoff_datetime#262 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#261 as timestamp), cast(tpep_dropoff_datetime#262 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#264 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#261 as timestamp), cast(tpep_dropoff_datetime#262 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(18) Project
+Output [4]: [cast(PULocationID#267L as int) AS pulocationid#302, cast(DOLocationID#268L as int) AS dolocationid#303, total_amount#276, year(cast(tpep_pickup_datetime#261 as date)) AS pickup_year#5035]
+Input [8]: [tpep_pickup_datetime#261, tpep_dropoff_datetime#262, trip_distance#264, PULocationID#267L, DOLocationID#268L, fare_amount#270, tip_amount#273, total_amount#276]
+
+(19) Scan parquet 
+Output [8]: [tpep_pickup_datetime#305, tpep_dropoff_datetime#306, trip_distance#308, PULocationID#311L, DOLocationID#312L, fare_amount#314, tip_amount#317, total_amount#320]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-07.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(20) Filter
+Input [8]: [tpep_pickup_datetime#305, tpep_dropoff_datetime#306, trip_distance#308, PULocationID#311L, DOLocationID#312L, fare_amount#314, tip_amount#317, total_amount#320]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#305) AND isnotnull(trip_distance#308)) AND isnotnull(fare_amount#314)) AND isnotnull(tip_amount#317)) AND isnotnull(tpep_dropoff_datetime#306)) AND (tpep_pickup_datetime#305 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#305 < 2025-01-01 00:00:00)) AND (trip_distance#308 > 0.0)) AND (trip_distance#308 <= 100.0)) AND (fare_amount#314 > 0.0)) AND (fare_amount#314 <= 500.0)) AND (tip_amount#317 >= 0.0)) AND (tpep_dropoff_datetime#306 > tpep_pickup_datetime#305)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#305 as timestamp), cast(tpep_dropoff_datetime#306 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#305 as timestamp), cast(tpep_dropoff_datetime#306 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#308 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#305 as timestamp), cast(tpep_dropoff_datetime#306 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(21) Project
+Output [4]: [cast(PULocationID#311L as int) AS pulocationid#346, cast(DOLocationID#312L as int) AS dolocationid#347, total_amount#320, year(cast(tpep_pickup_datetime#305 as date)) AS pickup_year#5036]
+Input [8]: [tpep_pickup_datetime#305, tpep_dropoff_datetime#306, trip_distance#308, PULocationID#311L, DOLocationID#312L, fare_amount#314, tip_amount#317, total_amount#320]
+
+(22) Scan parquet 
+Output [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, trip_distance#352, PULocationID#355L, DOLocationID#356L, fare_amount#358, tip_amount#361, total_amount#364]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-08.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(23) Filter
+Input [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, trip_distance#352, PULocationID#355L, DOLocationID#356L, fare_amount#358, tip_amount#361, total_amount#364]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#349) AND isnotnull(trip_distance#352)) AND isnotnull(fare_amount#358)) AND isnotnull(tip_amount#361)) AND isnotnull(tpep_dropoff_datetime#350)) AND (tpep_pickup_datetime#349 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#349 < 2025-01-01 00:00:00)) AND (trip_distance#352 > 0.0)) AND (trip_distance#352 <= 100.0)) AND (fare_amount#358 > 0.0)) AND (fare_amount#358 <= 500.0)) AND (tip_amount#361 >= 0.0)) AND (tpep_dropoff_datetime#350 > tpep_pickup_datetime#349)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#349 as timestamp), cast(tpep_dropoff_datetime#350 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#349 as timestamp), cast(tpep_dropoff_datetime#350 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#352 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#349 as timestamp), cast(tpep_dropoff_datetime#350 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(24) Project
+Output [4]: [cast(PULocationID#355L as int) AS pulocationid#390, cast(DOLocationID#356L as int) AS dolocationid#391, total_amount#364, year(cast(tpep_pickup_datetime#349 as date)) AS pickup_year#5037]
+Input [8]: [tpep_pickup_datetime#349, tpep_dropoff_datetime#350, trip_distance#352, PULocationID#355L, DOLocationID#356L, fare_amount#358, tip_amount#361, total_amount#364]
+
+(25) Scan parquet 
+Output [8]: [tpep_pickup_datetime#393, tpep_dropoff_datetime#394, trip_distance#396, PULocationID#399L, DOLocationID#400L, fare_amount#402, tip_amount#405, total_amount#408]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-09.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(26) Filter
+Input [8]: [tpep_pickup_datetime#393, tpep_dropoff_datetime#394, trip_distance#396, PULocationID#399L, DOLocationID#400L, fare_amount#402, tip_amount#405, total_amount#408]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#393) AND isnotnull(trip_distance#396)) AND isnotnull(fare_amount#402)) AND isnotnull(tip_amount#405)) AND isnotnull(tpep_dropoff_datetime#394)) AND (tpep_pickup_datetime#393 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#393 < 2025-01-01 00:00:00)) AND (trip_distance#396 > 0.0)) AND (trip_distance#396 <= 100.0)) AND (fare_amount#402 > 0.0)) AND (fare_amount#402 <= 500.0)) AND (tip_amount#405 >= 0.0)) AND (tpep_dropoff_datetime#394 > tpep_pickup_datetime#393)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#393 as timestamp), cast(tpep_dropoff_datetime#394 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#393 as timestamp), cast(tpep_dropoff_datetime#394 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#396 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#393 as timestamp), cast(tpep_dropoff_datetime#394 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(27) Project
+Output [4]: [cast(PULocationID#399L as int) AS pulocationid#434, cast(DOLocationID#400L as int) AS dolocationid#435, total_amount#408, year(cast(tpep_pickup_datetime#393 as date)) AS pickup_year#5038]
+Input [8]: [tpep_pickup_datetime#393, tpep_dropoff_datetime#394, trip_distance#396, PULocationID#399L, DOLocationID#400L, fare_amount#402, tip_amount#405, total_amount#408]
+
+(28) Scan parquet 
+Output [8]: [tpep_pickup_datetime#437, tpep_dropoff_datetime#438, trip_distance#440, PULocationID#443L, DOLocationID#444L, fare_amount#446, tip_amount#449, total_amount#452]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-10.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(29) Filter
+Input [8]: [tpep_pickup_datetime#437, tpep_dropoff_datetime#438, trip_distance#440, PULocationID#443L, DOLocationID#444L, fare_amount#446, tip_amount#449, total_amount#452]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#437) AND isnotnull(trip_distance#440)) AND isnotnull(fare_amount#446)) AND isnotnull(tip_amount#449)) AND isnotnull(tpep_dropoff_datetime#438)) AND (tpep_pickup_datetime#437 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#437 < 2025-01-01 00:00:00)) AND (trip_distance#440 > 0.0)) AND (trip_distance#440 <= 100.0)) AND (fare_amount#446 > 0.0)) AND (fare_amount#446 <= 500.0)) AND (tip_amount#449 >= 0.0)) AND (tpep_dropoff_datetime#438 > tpep_pickup_datetime#437)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#437 as timestamp), cast(tpep_dropoff_datetime#438 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#437 as timestamp), cast(tpep_dropoff_datetime#438 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#440 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#437 as timestamp), cast(tpep_dropoff_datetime#438 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(30) Project
+Output [4]: [cast(PULocationID#443L as int) AS pulocationid#478, cast(DOLocationID#444L as int) AS dolocationid#479, total_amount#452, year(cast(tpep_pickup_datetime#437 as date)) AS pickup_year#5039]
+Input [8]: [tpep_pickup_datetime#437, tpep_dropoff_datetime#438, trip_distance#440, PULocationID#443L, DOLocationID#444L, fare_amount#446, tip_amount#449, total_amount#452]
+
+(31) Scan parquet 
+Output [8]: [tpep_pickup_datetime#481, tpep_dropoff_datetime#482, trip_distance#484, PULocationID#487L, DOLocationID#488L, fare_amount#490, tip_amount#493, total_amount#496]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-11.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(32) Filter
+Input [8]: [tpep_pickup_datetime#481, tpep_dropoff_datetime#482, trip_distance#484, PULocationID#487L, DOLocationID#488L, fare_amount#490, tip_amount#493, total_amount#496]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#481) AND isnotnull(trip_distance#484)) AND isnotnull(fare_amount#490)) AND isnotnull(tip_amount#493)) AND isnotnull(tpep_dropoff_datetime#482)) AND (tpep_pickup_datetime#481 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#481 < 2025-01-01 00:00:00)) AND (trip_distance#484 > 0.0)) AND (trip_distance#484 <= 100.0)) AND (fare_amount#490 > 0.0)) AND (fare_amount#490 <= 500.0)) AND (tip_amount#493 >= 0.0)) AND (tpep_dropoff_datetime#482 > tpep_pickup_datetime#481)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#481 as timestamp), cast(tpep_dropoff_datetime#482 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#481 as timestamp), cast(tpep_dropoff_datetime#482 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#484 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#481 as timestamp), cast(tpep_dropoff_datetime#482 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(33) Project
+Output [4]: [cast(PULocationID#487L as int) AS pulocationid#522, cast(DOLocationID#488L as int) AS dolocationid#523, total_amount#496, year(cast(tpep_pickup_datetime#481 as date)) AS pickup_year#5040]
+Input [8]: [tpep_pickup_datetime#481, tpep_dropoff_datetime#482, trip_distance#484, PULocationID#487L, DOLocationID#488L, fare_amount#490, tip_amount#493, total_amount#496]
+
+(34) Scan parquet 
+Output [8]: [tpep_pickup_datetime#525, tpep_dropoff_datetime#526, trip_distance#528, PULocationID#531L, DOLocationID#532L, fare_amount#534, tip_amount#537, total_amount#540]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2022-12.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(35) Filter
+Input [8]: [tpep_pickup_datetime#525, tpep_dropoff_datetime#526, trip_distance#528, PULocationID#531L, DOLocationID#532L, fare_amount#534, tip_amount#537, total_amount#540]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#525) AND isnotnull(trip_distance#528)) AND isnotnull(fare_amount#534)) AND isnotnull(tip_amount#537)) AND isnotnull(tpep_dropoff_datetime#526)) AND (tpep_pickup_datetime#525 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#525 < 2025-01-01 00:00:00)) AND (trip_distance#528 > 0.0)) AND (trip_distance#528 <= 100.0)) AND (fare_amount#534 > 0.0)) AND (fare_amount#534 <= 500.0)) AND (tip_amount#537 >= 0.0)) AND (tpep_dropoff_datetime#526 > tpep_pickup_datetime#525)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#525 as timestamp), cast(tpep_dropoff_datetime#526 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#525 as timestamp), cast(tpep_dropoff_datetime#526 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#528 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#525 as timestamp), cast(tpep_dropoff_datetime#526 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(36) Project
+Output [4]: [cast(PULocationID#531L as int) AS pulocationid#566, cast(DOLocationID#532L as int) AS dolocationid#567, total_amount#540, year(cast(tpep_pickup_datetime#525 as date)) AS pickup_year#5041]
+Input [8]: [tpep_pickup_datetime#525, tpep_dropoff_datetime#526, trip_distance#528, PULocationID#531L, DOLocationID#532L, fare_amount#534, tip_amount#537, total_amount#540]
+
+(37) Scan parquet 
+Output [8]: [tpep_pickup_datetime#569, tpep_dropoff_datetime#570, trip_distance#572, PULocationID#575L, DOLocationID#576L, fare_amount#578, tip_amount#581, total_amount#584]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-01.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:bigint,DOLocationID:bigint,fare_amount:double,tip_amount:double,total_amount:double>
+
+(38) Filter
+Input [8]: [tpep_pickup_datetime#569, tpep_dropoff_datetime#570, trip_distance#572, PULocationID#575L, DOLocationID#576L, fare_amount#578, tip_amount#581, total_amount#584]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#569) AND isnotnull(trip_distance#572)) AND isnotnull(fare_amount#578)) AND isnotnull(tip_amount#581)) AND isnotnull(tpep_dropoff_datetime#570)) AND (tpep_pickup_datetime#569 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#569 < 2025-01-01 00:00:00)) AND (trip_distance#572 > 0.0)) AND (trip_distance#572 <= 100.0)) AND (fare_amount#578 > 0.0)) AND (fare_amount#578 <= 500.0)) AND (tip_amount#581 >= 0.0)) AND (tpep_dropoff_datetime#570 > tpep_pickup_datetime#569)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#569 as timestamp), cast(tpep_dropoff_datetime#570 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#569 as timestamp), cast(tpep_dropoff_datetime#570 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#572 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#569 as timestamp), cast(tpep_dropoff_datetime#570 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(39) Project
+Output [4]: [cast(PULocationID#575L as int) AS pulocationid#610, cast(DOLocationID#576L as int) AS dolocationid#611, total_amount#584, year(cast(tpep_pickup_datetime#569 as date)) AS pickup_year#5042]
+Input [8]: [tpep_pickup_datetime#569, tpep_dropoff_datetime#570, trip_distance#572, PULocationID#575L, DOLocationID#576L, fare_amount#578, tip_amount#581, total_amount#584]
+
+(40) Scan parquet 
+Output [8]: [tpep_pickup_datetime#613, tpep_dropoff_datetime#614, trip_distance#616, PULocationID#619, DOLocationID#620, fare_amount#622, tip_amount#625, total_amount#628]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-02.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(41) Filter
+Input [8]: [tpep_pickup_datetime#613, tpep_dropoff_datetime#614, trip_distance#616, PULocationID#619, DOLocationID#620, fare_amount#622, tip_amount#625, total_amount#628]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#613) AND isnotnull(trip_distance#616)) AND isnotnull(fare_amount#622)) AND isnotnull(tip_amount#625)) AND isnotnull(tpep_dropoff_datetime#614)) AND (tpep_pickup_datetime#613 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#613 < 2025-01-01 00:00:00)) AND (trip_distance#616 > 0.0)) AND (trip_distance#616 <= 100.0)) AND (fare_amount#622 > 0.0)) AND (fare_amount#622 <= 500.0)) AND (tip_amount#625 >= 0.0)) AND (tpep_dropoff_datetime#614 > tpep_pickup_datetime#613)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#613 as timestamp), cast(tpep_dropoff_datetime#614 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#613 as timestamp), cast(tpep_dropoff_datetime#614 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#616 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#613 as timestamp), cast(tpep_dropoff_datetime#614 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(42) Project
+Output [4]: [PULocationID#619 AS pulocationid#654, DOLocationID#620 AS dolocationid#655, total_amount#628, year(cast(tpep_pickup_datetime#613 as date)) AS pickup_year#5043]
+Input [8]: [tpep_pickup_datetime#613, tpep_dropoff_datetime#614, trip_distance#616, PULocationID#619, DOLocationID#620, fare_amount#622, tip_amount#625, total_amount#628]
+
+(43) Scan parquet 
+Output [8]: [tpep_pickup_datetime#657, tpep_dropoff_datetime#658, trip_distance#660, PULocationID#663, DOLocationID#664, fare_amount#666, tip_amount#669, total_amount#672]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-03.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(44) Filter
+Input [8]: [tpep_pickup_datetime#657, tpep_dropoff_datetime#658, trip_distance#660, PULocationID#663, DOLocationID#664, fare_amount#666, tip_amount#669, total_amount#672]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#657) AND isnotnull(trip_distance#660)) AND isnotnull(fare_amount#666)) AND isnotnull(tip_amount#669)) AND isnotnull(tpep_dropoff_datetime#658)) AND (tpep_pickup_datetime#657 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#657 < 2025-01-01 00:00:00)) AND (trip_distance#660 > 0.0)) AND (trip_distance#660 <= 100.0)) AND (fare_amount#666 > 0.0)) AND (fare_amount#666 <= 500.0)) AND (tip_amount#669 >= 0.0)) AND (tpep_dropoff_datetime#658 > tpep_pickup_datetime#657)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#657 as timestamp), cast(tpep_dropoff_datetime#658 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#657 as timestamp), cast(tpep_dropoff_datetime#658 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#660 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#657 as timestamp), cast(tpep_dropoff_datetime#658 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(45) Project
+Output [4]: [PULocationID#663 AS pulocationid#698, DOLocationID#664 AS dolocationid#699, total_amount#672, year(cast(tpep_pickup_datetime#657 as date)) AS pickup_year#5044]
+Input [8]: [tpep_pickup_datetime#657, tpep_dropoff_datetime#658, trip_distance#660, PULocationID#663, DOLocationID#664, fare_amount#666, tip_amount#669, total_amount#672]
+
+(46) Scan parquet 
+Output [8]: [tpep_pickup_datetime#701, tpep_dropoff_datetime#702, trip_distance#704, PULocationID#707, DOLocationID#708, fare_amount#710, tip_amount#713, total_amount#716]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-04.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(47) Filter
+Input [8]: [tpep_pickup_datetime#701, tpep_dropoff_datetime#702, trip_distance#704, PULocationID#707, DOLocationID#708, fare_amount#710, tip_amount#713, total_amount#716]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#701) AND isnotnull(trip_distance#704)) AND isnotnull(fare_amount#710)) AND isnotnull(tip_amount#713)) AND isnotnull(tpep_dropoff_datetime#702)) AND (tpep_pickup_datetime#701 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#701 < 2025-01-01 00:00:00)) AND (trip_distance#704 > 0.0)) AND (trip_distance#704 <= 100.0)) AND (fare_amount#710 > 0.0)) AND (fare_amount#710 <= 500.0)) AND (tip_amount#713 >= 0.0)) AND (tpep_dropoff_datetime#702 > tpep_pickup_datetime#701)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#701 as timestamp), cast(tpep_dropoff_datetime#702 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#701 as timestamp), cast(tpep_dropoff_datetime#702 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#704 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#701 as timestamp), cast(tpep_dropoff_datetime#702 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(48) Project
+Output [4]: [PULocationID#707 AS pulocationid#742, DOLocationID#708 AS dolocationid#743, total_amount#716, year(cast(tpep_pickup_datetime#701 as date)) AS pickup_year#5045]
+Input [8]: [tpep_pickup_datetime#701, tpep_dropoff_datetime#702, trip_distance#704, PULocationID#707, DOLocationID#708, fare_amount#710, tip_amount#713, total_amount#716]
+
+(49) Scan parquet 
+Output [8]: [tpep_pickup_datetime#745, tpep_dropoff_datetime#746, trip_distance#748, PULocationID#751, DOLocationID#752, fare_amount#754, tip_amount#757, total_amount#760]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-05.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(50) Filter
+Input [8]: [tpep_pickup_datetime#745, tpep_dropoff_datetime#746, trip_distance#748, PULocationID#751, DOLocationID#752, fare_amount#754, tip_amount#757, total_amount#760]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#745) AND isnotnull(trip_distance#748)) AND isnotnull(fare_amount#754)) AND isnotnull(tip_amount#757)) AND isnotnull(tpep_dropoff_datetime#746)) AND (tpep_pickup_datetime#745 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#745 < 2025-01-01 00:00:00)) AND (trip_distance#748 > 0.0)) AND (trip_distance#748 <= 100.0)) AND (fare_amount#754 > 0.0)) AND (fare_amount#754 <= 500.0)) AND (tip_amount#757 >= 0.0)) AND (tpep_dropoff_datetime#746 > tpep_pickup_datetime#745)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#745 as timestamp), cast(tpep_dropoff_datetime#746 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#745 as timestamp), cast(tpep_dropoff_datetime#746 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#748 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#745 as timestamp), cast(tpep_dropoff_datetime#746 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(51) Project
+Output [4]: [PULocationID#751 AS pulocationid#786, DOLocationID#752 AS dolocationid#787, total_amount#760, year(cast(tpep_pickup_datetime#745 as date)) AS pickup_year#5046]
+Input [8]: [tpep_pickup_datetime#745, tpep_dropoff_datetime#746, trip_distance#748, PULocationID#751, DOLocationID#752, fare_amount#754, tip_amount#757, total_amount#760]
+
+(52) Scan parquet 
+Output [8]: [tpep_pickup_datetime#789, tpep_dropoff_datetime#790, trip_distance#792, PULocationID#795, DOLocationID#796, fare_amount#798, tip_amount#801, total_amount#804]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-06.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(53) Filter
+Input [8]: [tpep_pickup_datetime#789, tpep_dropoff_datetime#790, trip_distance#792, PULocationID#795, DOLocationID#796, fare_amount#798, tip_amount#801, total_amount#804]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#789) AND isnotnull(trip_distance#792)) AND isnotnull(fare_amount#798)) AND isnotnull(tip_amount#801)) AND isnotnull(tpep_dropoff_datetime#790)) AND (tpep_pickup_datetime#789 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#789 < 2025-01-01 00:00:00)) AND (trip_distance#792 > 0.0)) AND (trip_distance#792 <= 100.0)) AND (fare_amount#798 > 0.0)) AND (fare_amount#798 <= 500.0)) AND (tip_amount#801 >= 0.0)) AND (tpep_dropoff_datetime#790 > tpep_pickup_datetime#789)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#789 as timestamp), cast(tpep_dropoff_datetime#790 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#789 as timestamp), cast(tpep_dropoff_datetime#790 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#792 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#789 as timestamp), cast(tpep_dropoff_datetime#790 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(54) Project
+Output [4]: [PULocationID#795 AS pulocationid#830, DOLocationID#796 AS dolocationid#831, total_amount#804, year(cast(tpep_pickup_datetime#789 as date)) AS pickup_year#5047]
+Input [8]: [tpep_pickup_datetime#789, tpep_dropoff_datetime#790, trip_distance#792, PULocationID#795, DOLocationID#796, fare_amount#798, tip_amount#801, total_amount#804]
+
+(55) Scan parquet 
+Output [8]: [tpep_pickup_datetime#833, tpep_dropoff_datetime#834, trip_distance#836, PULocationID#839, DOLocationID#840, fare_amount#842, tip_amount#845, total_amount#848]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-07.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(56) Filter
+Input [8]: [tpep_pickup_datetime#833, tpep_dropoff_datetime#834, trip_distance#836, PULocationID#839, DOLocationID#840, fare_amount#842, tip_amount#845, total_amount#848]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#833) AND isnotnull(trip_distance#836)) AND isnotnull(fare_amount#842)) AND isnotnull(tip_amount#845)) AND isnotnull(tpep_dropoff_datetime#834)) AND (tpep_pickup_datetime#833 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#833 < 2025-01-01 00:00:00)) AND (trip_distance#836 > 0.0)) AND (trip_distance#836 <= 100.0)) AND (fare_amount#842 > 0.0)) AND (fare_amount#842 <= 500.0)) AND (tip_amount#845 >= 0.0)) AND (tpep_dropoff_datetime#834 > tpep_pickup_datetime#833)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#833 as timestamp), cast(tpep_dropoff_datetime#834 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#833 as timestamp), cast(tpep_dropoff_datetime#834 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#836 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#833 as timestamp), cast(tpep_dropoff_datetime#834 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(57) Project
+Output [4]: [PULocationID#839 AS pulocationid#874, DOLocationID#840 AS dolocationid#875, total_amount#848, year(cast(tpep_pickup_datetime#833 as date)) AS pickup_year#5048]
+Input [8]: [tpep_pickup_datetime#833, tpep_dropoff_datetime#834, trip_distance#836, PULocationID#839, DOLocationID#840, fare_amount#842, tip_amount#845, total_amount#848]
+
+(58) Scan parquet 
+Output [8]: [tpep_pickup_datetime#877, tpep_dropoff_datetime#878, trip_distance#880, PULocationID#883, DOLocationID#884, fare_amount#886, tip_amount#889, total_amount#892]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-08.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(59) Filter
+Input [8]: [tpep_pickup_datetime#877, tpep_dropoff_datetime#878, trip_distance#880, PULocationID#883, DOLocationID#884, fare_amount#886, tip_amount#889, total_amount#892]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#877) AND isnotnull(trip_distance#880)) AND isnotnull(fare_amount#886)) AND isnotnull(tip_amount#889)) AND isnotnull(tpep_dropoff_datetime#878)) AND (tpep_pickup_datetime#877 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#877 < 2025-01-01 00:00:00)) AND (trip_distance#880 > 0.0)) AND (trip_distance#880 <= 100.0)) AND (fare_amount#886 > 0.0)) AND (fare_amount#886 <= 500.0)) AND (tip_amount#889 >= 0.0)) AND (tpep_dropoff_datetime#878 > tpep_pickup_datetime#877)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#877 as timestamp), cast(tpep_dropoff_datetime#878 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#877 as timestamp), cast(tpep_dropoff_datetime#878 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#880 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#877 as timestamp), cast(tpep_dropoff_datetime#878 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(60) Project
+Output [4]: [PULocationID#883 AS pulocationid#918, DOLocationID#884 AS dolocationid#919, total_amount#892, year(cast(tpep_pickup_datetime#877 as date)) AS pickup_year#5049]
+Input [8]: [tpep_pickup_datetime#877, tpep_dropoff_datetime#878, trip_distance#880, PULocationID#883, DOLocationID#884, fare_amount#886, tip_amount#889, total_amount#892]
+
+(61) Scan parquet 
+Output [8]: [tpep_pickup_datetime#921, tpep_dropoff_datetime#922, trip_distance#924, PULocationID#927, DOLocationID#928, fare_amount#930, tip_amount#933, total_amount#936]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-09.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(62) Filter
+Input [8]: [tpep_pickup_datetime#921, tpep_dropoff_datetime#922, trip_distance#924, PULocationID#927, DOLocationID#928, fare_amount#930, tip_amount#933, total_amount#936]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#921) AND isnotnull(trip_distance#924)) AND isnotnull(fare_amount#930)) AND isnotnull(tip_amount#933)) AND isnotnull(tpep_dropoff_datetime#922)) AND (tpep_pickup_datetime#921 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#921 < 2025-01-01 00:00:00)) AND (trip_distance#924 > 0.0)) AND (trip_distance#924 <= 100.0)) AND (fare_amount#930 > 0.0)) AND (fare_amount#930 <= 500.0)) AND (tip_amount#933 >= 0.0)) AND (tpep_dropoff_datetime#922 > tpep_pickup_datetime#921)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#921 as timestamp), cast(tpep_dropoff_datetime#922 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#921 as timestamp), cast(tpep_dropoff_datetime#922 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#924 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#921 as timestamp), cast(tpep_dropoff_datetime#922 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(63) Project
+Output [4]: [PULocationID#927 AS pulocationid#962, DOLocationID#928 AS dolocationid#963, total_amount#936, year(cast(tpep_pickup_datetime#921 as date)) AS pickup_year#5050]
+Input [8]: [tpep_pickup_datetime#921, tpep_dropoff_datetime#922, trip_distance#924, PULocationID#927, DOLocationID#928, fare_amount#930, tip_amount#933, total_amount#936]
+
+(64) Scan parquet 
+Output [8]: [tpep_pickup_datetime#965, tpep_dropoff_datetime#966, trip_distance#968, PULocationID#971, DOLocationID#972, fare_amount#974, tip_amount#977, total_amount#980]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-10.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(65) Filter
+Input [8]: [tpep_pickup_datetime#965, tpep_dropoff_datetime#966, trip_distance#968, PULocationID#971, DOLocationID#972, fare_amount#974, tip_amount#977, total_amount#980]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#965) AND isnotnull(trip_distance#968)) AND isnotnull(fare_amount#974)) AND isnotnull(tip_amount#977)) AND isnotnull(tpep_dropoff_datetime#966)) AND (tpep_pickup_datetime#965 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#965 < 2025-01-01 00:00:00)) AND (trip_distance#968 > 0.0)) AND (trip_distance#968 <= 100.0)) AND (fare_amount#974 > 0.0)) AND (fare_amount#974 <= 500.0)) AND (tip_amount#977 >= 0.0)) AND (tpep_dropoff_datetime#966 > tpep_pickup_datetime#965)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#965 as timestamp), cast(tpep_dropoff_datetime#966 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#965 as timestamp), cast(tpep_dropoff_datetime#966 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#968 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#965 as timestamp), cast(tpep_dropoff_datetime#966 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(66) Project
+Output [4]: [PULocationID#971 AS pulocationid#1006, DOLocationID#972 AS dolocationid#1007, total_amount#980, year(cast(tpep_pickup_datetime#965 as date)) AS pickup_year#5051]
+Input [8]: [tpep_pickup_datetime#965, tpep_dropoff_datetime#966, trip_distance#968, PULocationID#971, DOLocationID#972, fare_amount#974, tip_amount#977, total_amount#980]
+
+(67) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1009, tpep_dropoff_datetime#1010, trip_distance#1012, PULocationID#1015, DOLocationID#1016, fare_amount#1018, tip_amount#1021, total_amount#1024]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-11.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(68) Filter
+Input [8]: [tpep_pickup_datetime#1009, tpep_dropoff_datetime#1010, trip_distance#1012, PULocationID#1015, DOLocationID#1016, fare_amount#1018, tip_amount#1021, total_amount#1024]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1009) AND isnotnull(trip_distance#1012)) AND isnotnull(fare_amount#1018)) AND isnotnull(tip_amount#1021)) AND isnotnull(tpep_dropoff_datetime#1010)) AND (tpep_pickup_datetime#1009 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1009 < 2025-01-01 00:00:00)) AND (trip_distance#1012 > 0.0)) AND (trip_distance#1012 <= 100.0)) AND (fare_amount#1018 > 0.0)) AND (fare_amount#1018 <= 500.0)) AND (tip_amount#1021 >= 0.0)) AND (tpep_dropoff_datetime#1010 > tpep_pickup_datetime#1009)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1009 as timestamp), cast(tpep_dropoff_datetime#1010 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1009 as timestamp), cast(tpep_dropoff_datetime#1010 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1012 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1009 as timestamp), cast(tpep_dropoff_datetime#1010 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(69) Project
+Output [4]: [PULocationID#1015 AS pulocationid#1050, DOLocationID#1016 AS dolocationid#1051, total_amount#1024, year(cast(tpep_pickup_datetime#1009 as date)) AS pickup_year#5052]
+Input [8]: [tpep_pickup_datetime#1009, tpep_dropoff_datetime#1010, trip_distance#1012, PULocationID#1015, DOLocationID#1016, fare_amount#1018, tip_amount#1021, total_amount#1024]
+
+(70) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1053, tpep_dropoff_datetime#1054, trip_distance#1056, PULocationID#1059, DOLocationID#1060, fare_amount#1062, tip_amount#1065, total_amount#1068]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2023-12.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(71) Filter
+Input [8]: [tpep_pickup_datetime#1053, tpep_dropoff_datetime#1054, trip_distance#1056, PULocationID#1059, DOLocationID#1060, fare_amount#1062, tip_amount#1065, total_amount#1068]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1053) AND isnotnull(trip_distance#1056)) AND isnotnull(fare_amount#1062)) AND isnotnull(tip_amount#1065)) AND isnotnull(tpep_dropoff_datetime#1054)) AND (tpep_pickup_datetime#1053 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1053 < 2025-01-01 00:00:00)) AND (trip_distance#1056 > 0.0)) AND (trip_distance#1056 <= 100.0)) AND (fare_amount#1062 > 0.0)) AND (fare_amount#1062 <= 500.0)) AND (tip_amount#1065 >= 0.0)) AND (tpep_dropoff_datetime#1054 > tpep_pickup_datetime#1053)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1053 as timestamp), cast(tpep_dropoff_datetime#1054 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1053 as timestamp), cast(tpep_dropoff_datetime#1054 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1056 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1053 as timestamp), cast(tpep_dropoff_datetime#1054 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(72) Project
+Output [4]: [PULocationID#1059 AS pulocationid#1094, DOLocationID#1060 AS dolocationid#1095, total_amount#1068, year(cast(tpep_pickup_datetime#1053 as date)) AS pickup_year#5053]
+Input [8]: [tpep_pickup_datetime#1053, tpep_dropoff_datetime#1054, trip_distance#1056, PULocationID#1059, DOLocationID#1060, fare_amount#1062, tip_amount#1065, total_amount#1068]
+
+(73) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1097, tpep_dropoff_datetime#1098, trip_distance#1100, PULocationID#1103, DOLocationID#1104, fare_amount#1106, tip_amount#1109, total_amount#1112]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-01.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(74) Filter
+Input [8]: [tpep_pickup_datetime#1097, tpep_dropoff_datetime#1098, trip_distance#1100, PULocationID#1103, DOLocationID#1104, fare_amount#1106, tip_amount#1109, total_amount#1112]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1097) AND isnotnull(trip_distance#1100)) AND isnotnull(fare_amount#1106)) AND isnotnull(tip_amount#1109)) AND isnotnull(tpep_dropoff_datetime#1098)) AND (tpep_pickup_datetime#1097 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1097 < 2025-01-01 00:00:00)) AND (trip_distance#1100 > 0.0)) AND (trip_distance#1100 <= 100.0)) AND (fare_amount#1106 > 0.0)) AND (fare_amount#1106 <= 500.0)) AND (tip_amount#1109 >= 0.0)) AND (tpep_dropoff_datetime#1098 > tpep_pickup_datetime#1097)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1097 as timestamp), cast(tpep_dropoff_datetime#1098 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1097 as timestamp), cast(tpep_dropoff_datetime#1098 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1100 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1097 as timestamp), cast(tpep_dropoff_datetime#1098 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(75) Project
+Output [4]: [PULocationID#1103 AS pulocationid#1138, DOLocationID#1104 AS dolocationid#1139, total_amount#1112, year(cast(tpep_pickup_datetime#1097 as date)) AS pickup_year#5054]
+Input [8]: [tpep_pickup_datetime#1097, tpep_dropoff_datetime#1098, trip_distance#1100, PULocationID#1103, DOLocationID#1104, fare_amount#1106, tip_amount#1109, total_amount#1112]
+
+(76) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1141, tpep_dropoff_datetime#1142, trip_distance#1144, PULocationID#1147, DOLocationID#1148, fare_amount#1150, tip_amount#1153, total_amount#1156]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-02.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(77) Filter
+Input [8]: [tpep_pickup_datetime#1141, tpep_dropoff_datetime#1142, trip_distance#1144, PULocationID#1147, DOLocationID#1148, fare_amount#1150, tip_amount#1153, total_amount#1156]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1141) AND isnotnull(trip_distance#1144)) AND isnotnull(fare_amount#1150)) AND isnotnull(tip_amount#1153)) AND isnotnull(tpep_dropoff_datetime#1142)) AND (tpep_pickup_datetime#1141 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1141 < 2025-01-01 00:00:00)) AND (trip_distance#1144 > 0.0)) AND (trip_distance#1144 <= 100.0)) AND (fare_amount#1150 > 0.0)) AND (fare_amount#1150 <= 500.0)) AND (tip_amount#1153 >= 0.0)) AND (tpep_dropoff_datetime#1142 > tpep_pickup_datetime#1141)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1141 as timestamp), cast(tpep_dropoff_datetime#1142 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1141 as timestamp), cast(tpep_dropoff_datetime#1142 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1144 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1141 as timestamp), cast(tpep_dropoff_datetime#1142 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(78) Project
+Output [4]: [PULocationID#1147 AS pulocationid#1182, DOLocationID#1148 AS dolocationid#1183, total_amount#1156, year(cast(tpep_pickup_datetime#1141 as date)) AS pickup_year#5055]
+Input [8]: [tpep_pickup_datetime#1141, tpep_dropoff_datetime#1142, trip_distance#1144, PULocationID#1147, DOLocationID#1148, fare_amount#1150, tip_amount#1153, total_amount#1156]
+
+(79) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1185, tpep_dropoff_datetime#1186, trip_distance#1188, PULocationID#1191, DOLocationID#1192, fare_amount#1194, tip_amount#1197, total_amount#1200]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-03.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(80) Filter
+Input [8]: [tpep_pickup_datetime#1185, tpep_dropoff_datetime#1186, trip_distance#1188, PULocationID#1191, DOLocationID#1192, fare_amount#1194, tip_amount#1197, total_amount#1200]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1185) AND isnotnull(trip_distance#1188)) AND isnotnull(fare_amount#1194)) AND isnotnull(tip_amount#1197)) AND isnotnull(tpep_dropoff_datetime#1186)) AND (tpep_pickup_datetime#1185 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1185 < 2025-01-01 00:00:00)) AND (trip_distance#1188 > 0.0)) AND (trip_distance#1188 <= 100.0)) AND (fare_amount#1194 > 0.0)) AND (fare_amount#1194 <= 500.0)) AND (tip_amount#1197 >= 0.0)) AND (tpep_dropoff_datetime#1186 > tpep_pickup_datetime#1185)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1185 as timestamp), cast(tpep_dropoff_datetime#1186 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1185 as timestamp), cast(tpep_dropoff_datetime#1186 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1188 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1185 as timestamp), cast(tpep_dropoff_datetime#1186 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(81) Project
+Output [4]: [PULocationID#1191 AS pulocationid#1226, DOLocationID#1192 AS dolocationid#1227, total_amount#1200, year(cast(tpep_pickup_datetime#1185 as date)) AS pickup_year#5056]
+Input [8]: [tpep_pickup_datetime#1185, tpep_dropoff_datetime#1186, trip_distance#1188, PULocationID#1191, DOLocationID#1192, fare_amount#1194, tip_amount#1197, total_amount#1200]
+
+(82) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1229, tpep_dropoff_datetime#1230, trip_distance#1232, PULocationID#1235, DOLocationID#1236, fare_amount#1238, tip_amount#1241, total_amount#1244]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-04.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(83) Filter
+Input [8]: [tpep_pickup_datetime#1229, tpep_dropoff_datetime#1230, trip_distance#1232, PULocationID#1235, DOLocationID#1236, fare_amount#1238, tip_amount#1241, total_amount#1244]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1229) AND isnotnull(trip_distance#1232)) AND isnotnull(fare_amount#1238)) AND isnotnull(tip_amount#1241)) AND isnotnull(tpep_dropoff_datetime#1230)) AND (tpep_pickup_datetime#1229 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1229 < 2025-01-01 00:00:00)) AND (trip_distance#1232 > 0.0)) AND (trip_distance#1232 <= 100.0)) AND (fare_amount#1238 > 0.0)) AND (fare_amount#1238 <= 500.0)) AND (tip_amount#1241 >= 0.0)) AND (tpep_dropoff_datetime#1230 > tpep_pickup_datetime#1229)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1229 as timestamp), cast(tpep_dropoff_datetime#1230 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1229 as timestamp), cast(tpep_dropoff_datetime#1230 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1232 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1229 as timestamp), cast(tpep_dropoff_datetime#1230 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(84) Project
+Output [4]: [PULocationID#1235 AS pulocationid#1270, DOLocationID#1236 AS dolocationid#1271, total_amount#1244, year(cast(tpep_pickup_datetime#1229 as date)) AS pickup_year#5057]
+Input [8]: [tpep_pickup_datetime#1229, tpep_dropoff_datetime#1230, trip_distance#1232, PULocationID#1235, DOLocationID#1236, fare_amount#1238, tip_amount#1241, total_amount#1244]
+
+(85) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1273, tpep_dropoff_datetime#1274, trip_distance#1276, PULocationID#1279, DOLocationID#1280, fare_amount#1282, tip_amount#1285, total_amount#1288]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-05.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(86) Filter
+Input [8]: [tpep_pickup_datetime#1273, tpep_dropoff_datetime#1274, trip_distance#1276, PULocationID#1279, DOLocationID#1280, fare_amount#1282, tip_amount#1285, total_amount#1288]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1273) AND isnotnull(trip_distance#1276)) AND isnotnull(fare_amount#1282)) AND isnotnull(tip_amount#1285)) AND isnotnull(tpep_dropoff_datetime#1274)) AND (tpep_pickup_datetime#1273 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1273 < 2025-01-01 00:00:00)) AND (trip_distance#1276 > 0.0)) AND (trip_distance#1276 <= 100.0)) AND (fare_amount#1282 > 0.0)) AND (fare_amount#1282 <= 500.0)) AND (tip_amount#1285 >= 0.0)) AND (tpep_dropoff_datetime#1274 > tpep_pickup_datetime#1273)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1273 as timestamp), cast(tpep_dropoff_datetime#1274 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1273 as timestamp), cast(tpep_dropoff_datetime#1274 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1276 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1273 as timestamp), cast(tpep_dropoff_datetime#1274 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(87) Project
+Output [4]: [PULocationID#1279 AS pulocationid#1314, DOLocationID#1280 AS dolocationid#1315, total_amount#1288, year(cast(tpep_pickup_datetime#1273 as date)) AS pickup_year#5058]
+Input [8]: [tpep_pickup_datetime#1273, tpep_dropoff_datetime#1274, trip_distance#1276, PULocationID#1279, DOLocationID#1280, fare_amount#1282, tip_amount#1285, total_amount#1288]
+
+(88) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1317, tpep_dropoff_datetime#1318, trip_distance#1320, PULocationID#1323, DOLocationID#1324, fare_amount#1326, tip_amount#1329, total_amount#1332]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-06.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(89) Filter
+Input [8]: [tpep_pickup_datetime#1317, tpep_dropoff_datetime#1318, trip_distance#1320, PULocationID#1323, DOLocationID#1324, fare_amount#1326, tip_amount#1329, total_amount#1332]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1317) AND isnotnull(trip_distance#1320)) AND isnotnull(fare_amount#1326)) AND isnotnull(tip_amount#1329)) AND isnotnull(tpep_dropoff_datetime#1318)) AND (tpep_pickup_datetime#1317 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1317 < 2025-01-01 00:00:00)) AND (trip_distance#1320 > 0.0)) AND (trip_distance#1320 <= 100.0)) AND (fare_amount#1326 > 0.0)) AND (fare_amount#1326 <= 500.0)) AND (tip_amount#1329 >= 0.0)) AND (tpep_dropoff_datetime#1318 > tpep_pickup_datetime#1317)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1317 as timestamp), cast(tpep_dropoff_datetime#1318 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1317 as timestamp), cast(tpep_dropoff_datetime#1318 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1320 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1317 as timestamp), cast(tpep_dropoff_datetime#1318 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(90) Project
+Output [4]: [PULocationID#1323 AS pulocationid#1358, DOLocationID#1324 AS dolocationid#1359, total_amount#1332, year(cast(tpep_pickup_datetime#1317 as date)) AS pickup_year#5059]
+Input [8]: [tpep_pickup_datetime#1317, tpep_dropoff_datetime#1318, trip_distance#1320, PULocationID#1323, DOLocationID#1324, fare_amount#1326, tip_amount#1329, total_amount#1332]
+
+(91) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1361, tpep_dropoff_datetime#1362, trip_distance#1364, PULocationID#1367, DOLocationID#1368, fare_amount#1370, tip_amount#1373, total_amount#1376]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-07.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(92) Filter
+Input [8]: [tpep_pickup_datetime#1361, tpep_dropoff_datetime#1362, trip_distance#1364, PULocationID#1367, DOLocationID#1368, fare_amount#1370, tip_amount#1373, total_amount#1376]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1361) AND isnotnull(trip_distance#1364)) AND isnotnull(fare_amount#1370)) AND isnotnull(tip_amount#1373)) AND isnotnull(tpep_dropoff_datetime#1362)) AND (tpep_pickup_datetime#1361 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1361 < 2025-01-01 00:00:00)) AND (trip_distance#1364 > 0.0)) AND (trip_distance#1364 <= 100.0)) AND (fare_amount#1370 > 0.0)) AND (fare_amount#1370 <= 500.0)) AND (tip_amount#1373 >= 0.0)) AND (tpep_dropoff_datetime#1362 > tpep_pickup_datetime#1361)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1361 as timestamp), cast(tpep_dropoff_datetime#1362 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1361 as timestamp), cast(tpep_dropoff_datetime#1362 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1364 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1361 as timestamp), cast(tpep_dropoff_datetime#1362 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(93) Project
+Output [4]: [PULocationID#1367 AS pulocationid#1402, DOLocationID#1368 AS dolocationid#1403, total_amount#1376, year(cast(tpep_pickup_datetime#1361 as date)) AS pickup_year#5060]
+Input [8]: [tpep_pickup_datetime#1361, tpep_dropoff_datetime#1362, trip_distance#1364, PULocationID#1367, DOLocationID#1368, fare_amount#1370, tip_amount#1373, total_amount#1376]
+
+(94) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1405, tpep_dropoff_datetime#1406, trip_distance#1408, PULocationID#1411, DOLocationID#1412, fare_amount#1414, tip_amount#1417, total_amount#1420]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-08.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(95) Filter
+Input [8]: [tpep_pickup_datetime#1405, tpep_dropoff_datetime#1406, trip_distance#1408, PULocationID#1411, DOLocationID#1412, fare_amount#1414, tip_amount#1417, total_amount#1420]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1405) AND isnotnull(trip_distance#1408)) AND isnotnull(fare_amount#1414)) AND isnotnull(tip_amount#1417)) AND isnotnull(tpep_dropoff_datetime#1406)) AND (tpep_pickup_datetime#1405 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1405 < 2025-01-01 00:00:00)) AND (trip_distance#1408 > 0.0)) AND (trip_distance#1408 <= 100.0)) AND (fare_amount#1414 > 0.0)) AND (fare_amount#1414 <= 500.0)) AND (tip_amount#1417 >= 0.0)) AND (tpep_dropoff_datetime#1406 > tpep_pickup_datetime#1405)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1405 as timestamp), cast(tpep_dropoff_datetime#1406 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1405 as timestamp), cast(tpep_dropoff_datetime#1406 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1408 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1405 as timestamp), cast(tpep_dropoff_datetime#1406 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(96) Project
+Output [4]: [PULocationID#1411 AS pulocationid#1446, DOLocationID#1412 AS dolocationid#1447, total_amount#1420, year(cast(tpep_pickup_datetime#1405 as date)) AS pickup_year#5061]
+Input [8]: [tpep_pickup_datetime#1405, tpep_dropoff_datetime#1406, trip_distance#1408, PULocationID#1411, DOLocationID#1412, fare_amount#1414, tip_amount#1417, total_amount#1420]
+
+(97) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1449, tpep_dropoff_datetime#1450, trip_distance#1452, PULocationID#1455, DOLocationID#1456, fare_amount#1458, tip_amount#1461, total_amount#1464]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-09.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(98) Filter
+Input [8]: [tpep_pickup_datetime#1449, tpep_dropoff_datetime#1450, trip_distance#1452, PULocationID#1455, DOLocationID#1456, fare_amount#1458, tip_amount#1461, total_amount#1464]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1449) AND isnotnull(trip_distance#1452)) AND isnotnull(fare_amount#1458)) AND isnotnull(tip_amount#1461)) AND isnotnull(tpep_dropoff_datetime#1450)) AND (tpep_pickup_datetime#1449 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1449 < 2025-01-01 00:00:00)) AND (trip_distance#1452 > 0.0)) AND (trip_distance#1452 <= 100.0)) AND (fare_amount#1458 > 0.0)) AND (fare_amount#1458 <= 500.0)) AND (tip_amount#1461 >= 0.0)) AND (tpep_dropoff_datetime#1450 > tpep_pickup_datetime#1449)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1449 as timestamp), cast(tpep_dropoff_datetime#1450 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1449 as timestamp), cast(tpep_dropoff_datetime#1450 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1452 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1449 as timestamp), cast(tpep_dropoff_datetime#1450 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(99) Project
+Output [4]: [PULocationID#1455 AS pulocationid#1490, DOLocationID#1456 AS dolocationid#1491, total_amount#1464, year(cast(tpep_pickup_datetime#1449 as date)) AS pickup_year#5062]
+Input [8]: [tpep_pickup_datetime#1449, tpep_dropoff_datetime#1450, trip_distance#1452, PULocationID#1455, DOLocationID#1456, fare_amount#1458, tip_amount#1461, total_amount#1464]
+
+(100) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1493, tpep_dropoff_datetime#1494, trip_distance#1496, PULocationID#1499, DOLocationID#1500, fare_amount#1502, tip_amount#1505, total_amount#1508]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-10.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(101) Filter
+Input [8]: [tpep_pickup_datetime#1493, tpep_dropoff_datetime#1494, trip_distance#1496, PULocationID#1499, DOLocationID#1500, fare_amount#1502, tip_amount#1505, total_amount#1508]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1493) AND isnotnull(trip_distance#1496)) AND isnotnull(fare_amount#1502)) AND isnotnull(tip_amount#1505)) AND isnotnull(tpep_dropoff_datetime#1494)) AND (tpep_pickup_datetime#1493 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1493 < 2025-01-01 00:00:00)) AND (trip_distance#1496 > 0.0)) AND (trip_distance#1496 <= 100.0)) AND (fare_amount#1502 > 0.0)) AND (fare_amount#1502 <= 500.0)) AND (tip_amount#1505 >= 0.0)) AND (tpep_dropoff_datetime#1494 > tpep_pickup_datetime#1493)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1493 as timestamp), cast(tpep_dropoff_datetime#1494 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1493 as timestamp), cast(tpep_dropoff_datetime#1494 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1496 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1493 as timestamp), cast(tpep_dropoff_datetime#1494 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(102) Project
+Output [4]: [PULocationID#1499 AS pulocationid#1534, DOLocationID#1500 AS dolocationid#1535, total_amount#1508, year(cast(tpep_pickup_datetime#1493 as date)) AS pickup_year#5063]
+Input [8]: [tpep_pickup_datetime#1493, tpep_dropoff_datetime#1494, trip_distance#1496, PULocationID#1499, DOLocationID#1500, fare_amount#1502, tip_amount#1505, total_amount#1508]
+
+(103) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1537, tpep_dropoff_datetime#1538, trip_distance#1540, PULocationID#1543, DOLocationID#1544, fare_amount#1546, tip_amount#1549, total_amount#1552]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-11.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(104) Filter
+Input [8]: [tpep_pickup_datetime#1537, tpep_dropoff_datetime#1538, trip_distance#1540, PULocationID#1543, DOLocationID#1544, fare_amount#1546, tip_amount#1549, total_amount#1552]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1537) AND isnotnull(trip_distance#1540)) AND isnotnull(fare_amount#1546)) AND isnotnull(tip_amount#1549)) AND isnotnull(tpep_dropoff_datetime#1538)) AND (tpep_pickup_datetime#1537 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1537 < 2025-01-01 00:00:00)) AND (trip_distance#1540 > 0.0)) AND (trip_distance#1540 <= 100.0)) AND (fare_amount#1546 > 0.0)) AND (fare_amount#1546 <= 500.0)) AND (tip_amount#1549 >= 0.0)) AND (tpep_dropoff_datetime#1538 > tpep_pickup_datetime#1537)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1537 as timestamp), cast(tpep_dropoff_datetime#1538 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1537 as timestamp), cast(tpep_dropoff_datetime#1538 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1540 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1537 as timestamp), cast(tpep_dropoff_datetime#1538 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(105) Project
+Output [4]: [PULocationID#1543 AS pulocationid#1578, DOLocationID#1544 AS dolocationid#1579, total_amount#1552, year(cast(tpep_pickup_datetime#1537 as date)) AS pickup_year#5064]
+Input [8]: [tpep_pickup_datetime#1537, tpep_dropoff_datetime#1538, trip_distance#1540, PULocationID#1543, DOLocationID#1544, fare_amount#1546, tip_amount#1549, total_amount#1552]
+
+(106) Scan parquet 
+Output [8]: [tpep_pickup_datetime#1581, tpep_dropoff_datetime#1582, trip_distance#1584, PULocationID#1587, DOLocationID#1588, fare_amount#1590, tip_amount#1593, total_amount#1596]
+Batched: true
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/yellow/yellow_tripdata_2024-12.parquet]
+PushedFilters: [IsNotNull(tpep_pickup_datetime), IsNotNull(trip_distance), IsNotNull(fare_amount), IsNotNull(tip_amount), IsNotNull(tpep_dropoff_datetime), GreaterThanOrEqual(tpep_pickup_datetime,2022-01-01T00:00), LessThan(tpep_pickup_datetime,2025-01-01T00:00), GreaterThan(trip_distance,0.0), LessThanOrEqual(trip_distance,100.0), GreaterThan(fare_amount,0.0), LessThanOrEqual(fare_amount,500.0), GreaterThanOrEqual(tip_amount,0.0)]
+ReadSchema: struct<tpep_pickup_datetime:timestamp_ntz,tpep_dropoff_datetime:timestamp_ntz,trip_distance:double,PULocationID:int,DOLocationID:int,fare_amount:double,tip_amount:double,total_amount:double>
+
+(107) Filter
+Input [8]: [tpep_pickup_datetime#1581, tpep_dropoff_datetime#1582, trip_distance#1584, PULocationID#1587, DOLocationID#1588, fare_amount#1590, tip_amount#1593, total_amount#1596]
+Condition : (((((((((((((((isnotnull(tpep_pickup_datetime#1581) AND isnotnull(trip_distance#1584)) AND isnotnull(fare_amount#1590)) AND isnotnull(tip_amount#1593)) AND isnotnull(tpep_dropoff_datetime#1582)) AND (tpep_pickup_datetime#1581 >= 2022-01-01 00:00:00)) AND (tpep_pickup_datetime#1581 < 2025-01-01 00:00:00)) AND (trip_distance#1584 > 0.0)) AND (trip_distance#1584 <= 100.0)) AND (fare_amount#1590 > 0.0)) AND (fare_amount#1590 <= 500.0)) AND (tip_amount#1593 >= 0.0)) AND (tpep_dropoff_datetime#1582 > tpep_pickup_datetime#1581)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1581 as timestamp), cast(tpep_dropoff_datetime#1582 as timestamp), Some(Etc/UTC)) as double) / 60.0) >= 1.0)) AND ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1581 as timestamp), cast(tpep_dropoff_datetime#1582 as timestamp), Some(Etc/UTC)) as double) / 60.0) <= 180.0)) AND (round((trip_distance#1584 / ((cast(timestampdiff(SECOND, cast(tpep_pickup_datetime#1581 as timestamp), cast(tpep_dropoff_datetime#1582 as timestamp), Some(Etc/UTC)) as double) / 60.0) / 60.0)), 2) <= 80.0))
+
+(108) Project
+Output [4]: [PULocationID#1587 AS pulocationid#1622, DOLocationID#1588 AS dolocationid#1623, total_amount#1596, year(cast(tpep_pickup_datetime#1581 as date)) AS pickup_year#5065]
+Input [8]: [tpep_pickup_datetime#1581, tpep_dropoff_datetime#1582, trip_distance#1584, PULocationID#1587, DOLocationID#1588, fare_amount#1590, tip_amount#1593, total_amount#1596]
+
+(109) Union
+
+(110) Scan csv 
+Output [2]: [LocationID#36, Zone#38]
+Batched: false
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/taxi_zone_lookup.csv]
+PushedFilters: [IsNotNull(LocationID)]
+ReadSchema: struct<LocationID:int,Zone:string>
+
+(111) Filter
+Input [2]: [LocationID#36, Zone#38]
+Condition : isnotnull(LocationID#36)
+
+(112) Project
+Output [2]: [LocationID#36 AS pulocationid#1631, Zone#38 AS pu_zone#1633]
+Input [2]: [LocationID#36, Zone#38]
+
+(113) BroadcastExchange
+Input [2]: [pulocationid#1631, pu_zone#1633]
+Arguments: HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=10774]
+
+(114) BroadcastHashJoin
+Left keys [1]: [pulocationid#82]
+Right keys [1]: [pulocationid#1631]
+Join type: LeftOuter
+Join condition: None
+
+(115) Project
+Output [4]: [dolocationid#83, total_amount#75, pickup_year#1625, pu_zone#1633]
+Input [6]: [pulocationid#82, dolocationid#83, total_amount#75, pickup_year#1625, pulocationid#1631, pu_zone#1633]
+
+(116) Scan csv 
+Output [2]: [LocationID#1638, Zone#1640]
+Batched: false
+Location: InMemoryFileIndex [file:/home/jovyan/work/data/raw/taxi_zone_lookup.csv]
+PushedFilters: [IsNotNull(LocationID)]
+ReadSchema: struct<LocationID:int,Zone:string>
+
+(117) Filter
+Input [2]: [LocationID#1638, Zone#1640]
+Condition : isnotnull(LocationID#1638)
+
+(118) Project
+Output [2]: [LocationID#1638 AS dolocationid#1635, Zone#1640 AS do_zone#1637]
+Input [2]: [LocationID#1638, Zone#1640]
+
+(119) BroadcastExchange
+Input [2]: [dolocationid#1635, do_zone#1637]
+Arguments: HashedRelationBroadcastMode(List(cast(input[0, int, true] as bigint)),false), [plan_id=10778]
+
+(120) BroadcastHashJoin
+Left keys [1]: [dolocationid#83]
+Right keys [1]: [dolocationid#1635]
+Join type: LeftOuter
+Join condition: None
+
+(121) Project
+Output [3]: [pickup_year#1625, total_amount#75, CASE WHEN (pu_zone#1633 IN (JFK Airport,LaGuardia Airport,Newark Airport) OR do_zone#1637 IN (JFK Airport,LaGuardia Airport,Newark Airport)) THEN 1 ELSE 0 END AS is_airport#3896]
+Input [6]: [dolocationid#83, total_amount#75, pickup_year#1625, pu_zone#1633, dolocationid#1635, do_zone#1637]
+
+(122) HashAggregate
+Input [3]: [pickup_year#1625, total_amount#75, is_airport#3896]
+Keys [1]: [pickup_year#1625]
+Functions [4]: [partial_count(1), partial_sum(is_airport#3896), partial_sum(CASE WHEN (is_airport#3896 = 1) THEN total_amount#75 ELSE 0.0 END), partial_sum(total_amount#75)]
+Aggregate Attributes [4]: [count#3938L, sum#3939L, sum#5066, sum#3941]
+Results [5]: [pickup_year#1625, count#3942L, sum#3943L, sum#5067, sum#3945]
+
+(123) Exchange
+Input [5]: [pickup_year#1625, count#3942L, sum#3943L, sum#5067, sum#3945]
+Arguments: hashpartitioning(pickup_year#1625, 16), ENSURE_REQUIREMENTS, [plan_id=10783]
+
+(124) HashAggregate
+Input [5]: [pickup_year#1625, count#3942L, sum#3943L, sum#5067, sum#3945]
+Keys [1]: [pickup_year#1625]
+Functions [4]: [count(1), sum(is_airport#3896), sum(CASE WHEN (is_airport#3896 = 1) THEN total_amount#75 ELSE 0.0 END), sum(total_amount#75)]
+Aggregate Attributes [4]: [count(1)#3897L, sum(is_airport#3896)#3899L, sum(CASE WHEN (is_airport#3896 = 1) THEN total_amount#75 ELSE 0.0 END)#3902, sum(total_amount#75)#3901]
+Results [5]: [pickup_year#1625, count(1)#3897L AS total_trips#3892L, sum(is_airport#3896)#3899L AS airport_trips#3893L, round(((100.0 * cast(sum(is_airport#3896)#3899L as decimal(20,0))) / cast(count(1)#3897L as decimal(20,0))), 2) AS airport_trip_pct#3894, round(((100.0 * sum(CASE WHEN (is_airport#3896 = 1) THEN total_amount#75 ELSE 0.0 END)#3902) / sum(total_amount#75)#3901), 2) AS airport_revenue_pct#3895]
+
+(125) Exchange
+Input [5]: [pickup_year#1625, total_trips#3892L, airport_trips#3893L, airport_trip_pct#3894, airport_revenue_pct#3895]
+Arguments: rangepartitioning(pickup_year#1625 ASC NULLS FIRST, 16), ENSURE_REQUIREMENTS, [plan_id=10786]
+
+(126) Sort
+Input [5]: [pickup_year#1625, total_trips#3892L, airport_trips#3893L, airport_trip_pct#3894, airport_revenue_pct#3895]
+Arguments: [pickup_year#1625 ASC NULLS FIRST], true, 0
+
+(127) AdaptiveSparkPlan
+Output [5]: [pickup_year#1625, total_trips#3892L, airport_trips#3893L, airport_trip_pct#3894, airport_revenue_pct#3895]
+Arguments: isFinalPlan=false
+
+
